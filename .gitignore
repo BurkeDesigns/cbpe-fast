@@ -1,0 +1,8 @@
+target/
+*.so
+*.pyd
+__pycache__/
+*.egg-info/
+dist/
+bench/results_*.json
+bench/_bytefix_tokenizer.json

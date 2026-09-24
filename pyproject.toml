@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=1.7,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "cbpe-fast"
+version = "0.1.0"
+description = "Native Combinatorial BPE encoder: token-identical to the Python reference, faster than HF tokenizers v1"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "regex"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+# the reference implementation, needed only to check exactness
+test = ["combinatorial-bpe @ git+https://github.com/SwayStar123/CombinatorialBPE"]
+bench = ["tokenizers"]
+
+[tool.maturin]
+python-source = "python"
+module-name = "cbpe_fast._native"
