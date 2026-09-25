@@ -1,4 +1,4 @@
-# cbpe-fast
+# Fast Combinatorial BPE
 
 A native encoder and decoder for [Combinatorial BPE](https://github.com/SwayStar123/CombinatorialBPE)
 tokenizers. Its output is identical to the Python reference, token for token, and it is 3-4.5x
